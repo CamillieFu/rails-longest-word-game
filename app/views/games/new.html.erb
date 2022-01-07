@@ -9,7 +9,6 @@
     <input type="text" placeholder="What's the longest word?" class="form-control" name="answer">
     <input type="submit" value="submit" class="button">
     <%= hidden_field_tag 'letters', @letters, action: 'score' %>
-    <%# <%= hidden_field_tag 'submit', 'answer', action: 'create' %>
   </form>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </div>
