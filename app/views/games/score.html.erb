@@ -5,13 +5,13 @@
   <h2>Please enter a word</h2>
   <% elsif @is_word == true && @grid_valid == true %>
   <h2>Congratulations! "<%= @answer %>" is a valid English word</h2>
-  <h3>Your score: <%= session[:score] %></h3>
+  <%# <h3>Your score: <%= session[:score] %></h3>
   <% elsif @is_word == true && @grid_valid == false %>
   <h2>Sorry, "<%= @answer %>" cannot be built from <%= @letters.upcase %></h2>
-  <h3>Your score: <%= session[:score] %></h3>
+  <%# <h3>Your score: <%= session[:score]</h3> %>
   <% else %>
   <h2>Sorry, but "<%= @answer %>" is not a valid English word</h2>
-  <h3>Your score: <%= session[:score] %></h3>
+  <%# <h3>Your score: <%= session[:score]</h3> %>
   <% end %>
   <h3>Play a new game?</h3>
   <button class="button"><%= link_to 'Play again', root_path %></button>
