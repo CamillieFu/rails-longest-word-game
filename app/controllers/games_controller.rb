@@ -15,7 +15,12 @@ class GamesController < ApplicationController
     @is_word = is_word
     @grid_valid = grid_valid
     # updating session score
-    session[:score] += params[:answer].length.to_i if @is_word && @grid_valid
+    if session[:score].nil?
+      session[:score] = 0
+      session[:score] += params[:answer].length.to_i if @is_word && @grid_valid
+    else
+      session[:score] += params[:answer].length.to_i if @is_word && @grid_valid
+    end
   end
 
   private
